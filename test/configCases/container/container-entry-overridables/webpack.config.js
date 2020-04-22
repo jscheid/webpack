@@ -1,4 +1,4 @@
-const ContainerPlugin = require("../../../../lib/container/ContainerPlugin");
+const ContainerPlugin = require("../../../../").container.ContainerPlugin;
 
 module.exports = {
 	plugins: [

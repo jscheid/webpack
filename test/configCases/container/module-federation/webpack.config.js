@@ -1,4 +1,5 @@
-const ModuleFederationPlugin = require("../../../../lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("../../../../").container
+	.ModuleFederationPlugin;
 
 function createConfig() {
 	return {
