@@ -3137,6 +3137,7 @@ declare interface JsonpCompilationPluginHooks {
 	jsonpScript: SyncWaterfallHook<[string, Chunk, string]>;
 	linkPreload: SyncWaterfallHook<[string, Chunk, string]>;
 	linkPrefetch: SyncWaterfallHook<[string, Chunk, string]>;
+	mutateTag: SyncWaterfallHook<[string, any]>;
 }
 type JsonpScriptType = false | "module" | "text/javascript";
 declare class JsonpTemplatePlugin {
@@ -3149,6 +3150,7 @@ declare class JsonpTemplatePlugin {
 	static getCompilationHooks(
 		compilation: Compilation
 	): JsonpCompilationPluginHooks;
+	static renderAttributes(varName?: any, attributes?: any): any;
 }
 declare interface KnownBuildMeta {
 	moduleArgument?: string;
